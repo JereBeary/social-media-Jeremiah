@@ -1,6 +1,6 @@
 
 from Post import Post
-
+ 
 all_posts_archive = []
 
 all_posts_archive.append(Post("Marie", "Good morning!"))
@@ -9,6 +9,7 @@ all_posts_archive.append(Post("Alex", "Nice day today!"))
 all_posts_archive.append(Post("Jordan", "I am working on my coding project."))
 
 username = input("Enter your username: ")
+password = input("Enter your password: ")
 
 # your code here
 post1 = Post("Marie", "Good morning!")

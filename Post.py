@@ -1,7 +1,7 @@
 from datetime import datetime
 
 #defining the class properites inside
-class Post:
+class Post: 
     
     #initalizing the variable
     post_id = 0
