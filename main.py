@@ -1,17 +1,16 @@
 
 from Post import Post
- 
+# has the lists of old posts and random posts from others
 all_posts_archive = []
 
 all_posts_archive.append(Post("Marie", "Good morning!"))
 all_posts_archive.append(Post("Joe", "Hello!"))
 all_posts_archive.append(Post("Alex", "Nice day today!"))
 all_posts_archive.append(Post("Jordan", "I am working on my coding project."))
-
+# lets you put a username to call you by
 username = input("Enter your username: ")
-password = input("Enter your password: ")
 
-# your code here
+# random posts
 post1 = Post("Marie", "Good morning!")
 print(post1)
 
@@ -24,6 +23,7 @@ print(post3)
 post4 = Post("Jordan", "I am working on my coding project.")
 print(post4)
 
+# defining what each function does
 def handlenewpost(user, archive):
     message = input("Enter your message: ")
     new_post = Post(user, message)
@@ -51,12 +51,14 @@ def handleprintposts(user, archive):
 
 def handlechangeuser(user, archive):
     global username
+    # global reaches the assigned variable outside a function and allows it to be changed.
     username = input("Enter your new username: ")
     print("Your username is now " + str(username) + ".")
 
 def handlequit(user, archive):
-    print("Goodbye!")
+    print("Goodbye! :)")
 
+# lets you choose what function you want to use
 options= ["new," "remove," "change user," "print," "quit"]
 user_input = None
 while user_input != "quit":
@@ -73,7 +75,3 @@ while user_input != "quit":
         handlequit(username, all_posts_archive)
     else:       print("Invalid option. Please try again.")
 
-
-
-if __name__ == "__main__":
-    pass
